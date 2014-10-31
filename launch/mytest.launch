@@ -1,13 +1,9 @@
 <launch>
 	
-	<!--
-	<param name="gazebo/max_update_rate" value="200" type="double" />
-	<rosparam ns="gazebo">max_update_rate: 200.0</rosparam>
-	-->
-	
 	
 	<include  file="$(find gazebo_ros)/launch/empty_world.launch" />
 	<include  file="$(find crab_bot)/launch/arm_test.launch" />
+	
 	<!--
 	<include  file="$(find crab_bot)/launch/inc.record.launch" />
 	<include  file="$(find test_world)/launch/inc.rosbridge.launch" />

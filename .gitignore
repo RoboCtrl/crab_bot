@@ -1,0 +1,5 @@
+# ignore bag files - they tend to grow large and should only be added by hand if they are really required
+**/*.bag
+
+# ignore all files in the bag folder
+bag/*
