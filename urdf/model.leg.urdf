@@ -1,0 +1,167 @@
+<robot name="crab_bot_leg" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+	<link name="base" ></link>
+	<link name="shoulder" >
+		<gazebo>
+			<gravity>false</gravity>
+		</gazebo>
+		
+		<inertial>
+			<mass value="0.1"/>
+			<inertia
+				ixx="0.083"  ixy="0.0"
+				ixz="0.0"    iyy="0.083"
+				iyz="0.0"    izz="0.083"
+			/>
+		</inertial>
+		
+		<collision name="collision">
+			<geometry>
+				<mesh filename="file:///opt/shared/ros_indigo_workspace/src/crab_bot/meshes/sphere_joint.dae" />
+			</geometry>
+			<surface>
+				<friction>
+					<ode>
+						<mu>0</mu>
+						<mu2>0</mu2>
+						<slip1>1.0</slip1>
+						<slip2>1.0</slip2>
+					</ode>
+				</friction>
+			</surface>
+		</collision>
+		
+		<visual name="visual">
+			<origin rpy="0 0 -0.785398163" xyz="0 0 0"/>
+			<geometry>
+				<mesh filename="file:///opt/shared/ros_indigo_workspace/src/crab_bot/meshes/sphere_joint.dae" />
+			</geometry>
+		</visual>
+	</link>
+
+
+	<link name="upper_leg" >
+		<gazebo>
+			<gravity>false</gravity>
+		</gazebo>
+		
+		<inertial>
+			<mass value="0.05"/>
+			<inertia
+				ixx="0.083"  ixy="0.0"
+				ixz="0.0"    iyy="0.083"
+				iyz="0.0"    izz="0.083"
+			/>
+		</inertial>
+		
+		<collision name="collision">
+			<geometry>
+				<mesh filename="file:///opt/shared/ros_indigo_workspace/src/crab_bot/meshes/upper_leg.dae" />
+			</geometry>
+			<surface>
+				<friction>
+					<ode>
+						<mu>0</mu>
+						<mu2>0</mu2>
+						<slip1>1.0</slip1>
+						<slip2>1.0</slip2>
+					</ode>
+				</friction>
+			</surface>
+		</collision>
+		
+		<visual name="visual">
+			<origin rpy="0 0 -1.57079633" xyz="0.5 0 0"/>
+			<geometry>
+				<mesh filename="file:///opt/shared/ros_indigo_workspace/src/crab_bot/meshes/upper_leg.dae" />
+			</geometry>
+		</visual>
+	</link>
+
+
+	<link name="lower_leg" >
+		<gazebo>
+			<gravity>false</gravity>
+		</gazebo>
+		
+		<inertial>
+			<mass value="0.05"/>
+			<inertia
+				ixx="0.083"  ixy="0.0"
+				ixz="0.0"    iyy="0.083"
+				iyz="0.0"    izz="0.083"
+			/>
+		</inertial>
+		
+		<collision name="collision">
+			<geometry>
+				<mesh filename="file:///opt/shared/ros_indigo_workspace/src/crab_bot/meshes/lower_leg.dae" />
+			</geometry>
+			<surface>
+				<friction>
+					<ode>
+						<mu>0</mu>
+						<mu2>0</mu2>
+						<slip1>1.0</slip1>
+						<slip2>1.0</slip2>
+					</ode>
+				</friction>
+			</surface>
+		</collision>
+		
+		<visual name="visual">
+			<origin rpy="0 0 1.57079633" xyz="1 0 -0.02"/>
+			<geometry>
+				<mesh filename="file:///opt/shared/ros_indigo_workspace/src/crab_bot/meshes/lower_leg.dae" />
+			</geometry>
+		</visual>
+	</link>
+
+
+
+	<joint name="leg_joint_1" type="revolute">
+		<parent link="base"/>
+		<child link="shoulder"/>
+		<limit effort="1000.0" lower="-0.8" upper="0.8" velocity="0.8"/>
+		<origin xyz="0 0 0" rpy="0 0 0" />
+		<axis xyz="1 0 0"/>
+	</joint>
+
+
+	<joint name="leg_joint_2" type="revolute">
+		<parent link="shoulder"/>
+		<child link="upper_leg"/>
+		<limit effort="1000.0" lower="-0.8" upper="0.8" velocity="0.8"/>
+		<origin xyz="0 0 0" rpy="0 0 0" />
+		<axis xyz="1 0 0"/>
+	</joint>
+
+
+	<joint name="leg_joint_3" type="revolute">
+		<parent link="upper_leg"/>
+		<child link="lower_leg"/>
+		<limit effort="1000.0" lower="-0.8" upper="0.8" velocity="0.8"/>
+		<origin xyz="0 0 0" rpy="0 0 0" />
+		<axis xyz="0 0 1"/>
+	</joint>
+
+
+</robot>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

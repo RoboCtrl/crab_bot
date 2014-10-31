@@ -1,0 +1,19 @@
+<launch>
+	
+	
+	<arg  name="crab_arg"  default=" -urdf  -file $(find crab_bot)/urdf/model.urdf  -model test_crab"/>
+	
+	<rosparam file="$(find crab_bot)/config/config.yaml" command="load" ns="crab_02" />
+	
+	<param name="crab_robot_description" textfile="$(find crab_bot)/urdf/model.urdf"/>
+	
+	<!--
+	<node  name="test_model_01"  pkg="gazebo_ros"  type="spawn_model"   args="$(arg puck_arg)_01"  ns="puck_01" />
+		<rosparam file="$(find crab_bot)/config/config.yaml" command="load" />
+	-->
+	
+	<node  name="test_model_02"  pkg="gazebo_ros"  type="spawn_model"   args="$(arg crab_arg)_02  -x 3  -y 2"  ns="crab_02"  output="screen">
+	</node>
+	
+	
+</launch>

@@ -1,0 +1,13 @@
+<launch>
+	
+	
+	
+	<include  file="$(find gazebo_ros)/launch/shapes_world.launch" />
+	<include  file="$(find crab_bot)/launch/model.launch" />
+	<!--
+	<include  file="$(find crab_bot)/launch/inc.record.launch" />
+	<include  file="$(find test_world)/launch/inc.rosbridge.launch" />
+	-->
+	
+	
+</launch>

@@ -1,0 +1,115 @@
+<launch>
+	
+	
+	<arg  name="test_arg"  default=" -urdf  -file $(find crab_bot)/urdf/test.urdf  -model test_arm"/>
+	
+	<rosparam file="$(find crab_bot)/config/config.yaml" command="load" />
+	
+	<param name="crab_robot_description" textfile="$(find crab_bot)/urdf/model.urdf"/>
+	<param name="test_robot_description" textfile="$(find crab_bot)/urdf/test.urdf"/>
+	
+	<!--
+	<node  name="test_model_01"  pkg="gazebo_ros"  type="spawn_model"   args="$(arg puck_arg)_01"  ns="puck_01" />
+	-->
+	
+	<group ns="test_01">
+		
+		<rosparam file="$(find crab_bot)/config/config.yaml" command="load" />
+	
+		<node  name="test_model_01"  pkg="gazebo_ros"  type="spawn_model"   args="$(arg test_arg)_01  -x 2  -y 0  -z 1"  output="screen">
+		</node>
+	
+	</group>
+	
+	<group ns="test_02">
+		
+		<rosparam file="$(find crab_bot)/config/config.yaml" command="load" />
+	
+		<node  name="test_model_02"  pkg="gazebo_ros"  type="spawn_model"   args="$(arg test_arg)_02  -x 5  -y 2  -z 1"  output="screen">
+		</node>
+	
+	</group>
+	
+	
+	<group ns="test_03">
+		
+		<rosparam file="$(find crab_bot)/config/config.yaml" command="load" />
+	
+		<node  name="test_model_03"  pkg="gazebo_ros"  type="spawn_model"   args="$(arg test_arg)_03  -x 2  -y 4  -z 1"  output="screen">
+		</node>
+	
+	</group>
+	
+	
+	<group ns="test_04">
+		
+		<rosparam file="$(find crab_bot)/config/config.yaml" command="load" />
+	
+		<node  name="test_model_04"  pkg="gazebo_ros"  type="spawn_model"   args="$(arg test_arg)_04  -x 5  -y 6  -z 1"  output="screen">
+		</node>
+	
+	</group>
+	
+	
+	<group ns="test_05">
+		
+		<rosparam file="$(find crab_bot)/config/config.yaml" command="load" />
+	
+		<node  name="test_model_01"  pkg="gazebo_ros"  type="spawn_model"   args="$(arg test_arg)_05  -x 2  -y 8  -z 1"  output="screen">
+		</node>
+	
+	</group>
+	
+	
+	<group ns="test_06">
+		
+		<rosparam file="$(find crab_bot)/config/config.yaml" command="load" />
+	
+		<node  name="test_model_02"  pkg="gazebo_ros"  type="spawn_model"   args="$(arg test_arg)_06  -x 5  -y 10  -z 1"  output="screen">
+		</node>
+	
+	</group>
+	
+	
+	<group ns="test_07">
+		
+		<rosparam file="$(find crab_bot)/config/config.yaml" command="load" />
+	
+		<node  name="test_model_03"  pkg="gazebo_ros"  type="spawn_model"   args="$(arg test_arg)_07  -x 2  -y 12  -z 1"  output="screen">
+		</node>
+	
+	</group>
+	
+	
+	<group ns="test_08">
+		
+		<rosparam file="$(find crab_bot)/config/config.yaml" command="load" />
+	
+		<node  name="test_model_04"  pkg="gazebo_ros"  type="spawn_model"   args="$(arg test_arg)_08  -x 5  -y 14  -z 1"  output="screen">
+		</node>
+	
+	</group>
+	
+	
+	<group ns="test_09">
+		
+		<rosparam file="$(find crab_bot)/config/config.yaml" command="load" />
+	
+		<node  name="test_model_03"  pkg="gazebo_ros"  type="spawn_model"   args="$(arg test_arg)_09  -x 2  -y 16  -z 1"  output="screen">
+		</node>
+	
+	</group>
+	
+	
+	<group ns="test_10">
+		
+		<rosparam file="$(find crab_bot)/config/config.yaml" command="load" />
+	
+		<node  name="test_model_04"  pkg="gazebo_ros"  type="spawn_model"   args="$(arg test_arg)_10  -x 5  -y 18  -z 1"  output="screen">
+		</node>
+	
+	</group>
+	<!--
+	-->
+	
+</launch>

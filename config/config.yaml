@@ -1,0 +1,198 @@
+#crab_control:
+#  p_gain              PID controller p gain
+#  i_gain              PID controller i gain
+#  d_gain              PID controller d gain
+#  i_clamp             PID controller i min/max range: [-i_clamp, i_clamp]
+#  pid_multiplier      PID controller overall multiplier
+#  velocity_max        maximum target velocity of the controller
+#  velocity_damping    velocity damping factor
+leg_1_joint_0_dyn:
+  p_gain: 2.0
+  i_gain: 0.1
+  d_gain: 0.1
+  i_clamp: 0.5
+  pid_multiplier: 1.0
+  velocity_max: 1.0
+  velocity_damping: 0.09
+
+leg_1_joint_1_dyn:
+  p_gain: 0.172407
+  i_gain: 0.00118175
+  d_gain: 0.0288876
+  i_clamp: 0.0369872
+  pid_multiplier: 1.0
+  velocity_max: 1.0
+  velocity_damping: 0.09
+
+leg_1_joint_2_dyn:
+  p_gain: 0.172407
+  i_gain: 0.00118175
+  d_gain: 0.0288876
+  i_clamp: 0.0369872
+  pid_multiplier: 1.0
+  velocity_max: 1.0
+  velocity_damping: 0.09
+
+leg_1_joint_3_dyn:
+  p_gain: 0.275515
+  i_gain: 0.000756734
+  d_gain: 0.0288876
+  i_clamp: 0.0369872
+  pid_multiplier: 1.0
+  velocity_max: 1.0
+  velocity_damping: 0.09
+
+
+
+leg_2_joint_0_dyn:
+  p_gain: 2.0
+  i_gain: 0.1
+  d_gain: 0.1
+  i_clamp: 0.5
+  pid_multiplier: 1.0
+  velocity_max: 1.0
+  velocity_damping: 0.09
+
+leg_2_joint_1_dyn:
+  p_gain: 0.172407
+  i_gain: 0.00118175
+  d_gain: 0.0288876
+  i_clamp: 0.0369872
+  pid_multiplier: 1.0
+  velocity_max: 1.0
+  velocity_damping: 0.09
+
+leg_2_joint_2_dyn:
+  p_gain: 0.172407
+  i_gain: 0.00118175
+  d_gain: 0.0288876
+  i_clamp: 0.0369872
+  pid_multiplier: 1.0
+  velocity_max: 1.0
+  velocity_damping: 0.09
+
+leg_2_joint_3_dyn:
+  p_gain: 0.275515
+  i_gain: 0.000756734
+  d_gain: 0.0288876
+  i_clamp: 0.0369872
+  pid_multiplier: 1.0
+  velocity_max: 1.0
+  velocity_damping: 0.09
+
+
+
+leg_3_joint_0_dyn:
+  p_gain: 2.0
+  i_gain: 0.1
+  d_gain: 0.1
+  i_clamp: 0.5
+  pid_multiplier: 1.0
+  velocity_max: 1.0
+  velocity_damping: 0.09
+
+leg_3_joint_1_dyn:
+  p_gain: 0.172407
+  i_gain: 0.00118175
+  d_gain: 0.0288876
+  i_clamp: 0.0369872
+  pid_multiplier: 1.0
+  velocity_max: 1.0
+  velocity_damping: 0.09
+
+leg_3_joint_2_dyn:
+  p_gain: 0.172407
+  i_gain: 0.00118175
+  d_gain: 0.0288876
+  i_clamp: 0.0369872
+  pid_multiplier: 1.0
+  velocity_max: 1.0
+  velocity_damping: 0.09
+
+leg_3_joint_3_dyn:
+  p_gain: 0.275515
+  i_gain: 0.000756734
+  d_gain: 0.0288876
+  i_clamp: 0.0369872
+  pid_multiplier: 1.0
+  velocity_max: 1.0
+  velocity_damping: 0.09
+
+
+
+leg_4_joint_0_dyn:
+  p_gain: 2.0
+  i_gain: 0.1
+  d_gain: 0.1
+  i_clamp: 0.5
+  pid_multiplier: 1.0
+  velocity_max: 1.0
+  velocity_damping: 0.09
+
+leg_4_joint_1_dyn:
+  p_gain: 0.172407
+  i_gain: 0.00118175
+  d_gain: 0.0288876
+  i_clamp: 0.0369872
+  pid_multiplier: 1.0
+  velocity_max: 1.0
+  velocity_damping: 0.09
+
+leg_4_joint_2_dyn:
+  p_gain: 0.172407
+  i_gain: 0.00118175
+  d_gain: 0.0288876
+  i_clamp: 0.0369872
+  pid_multiplier: 1.0
+  velocity_max: 1.0
+  velocity_damping: 0.09
+
+leg_4_joint_3_dyn:
+  p_gain: 0.275515
+  i_gain: 0.000756734
+  d_gain: 0.0288876
+  i_clamp: 0.0369872
+  pid_multiplier: 1.0
+  velocity_max: 1.0
+  velocity_damping: 0.09
+
+
+
+leg_5_joint_0_dyn:
+  p_gain: 2.0
+  i_gain: 0.1
+  d_gain: 0.1
+  i_clamp: 0.5
+  pid_multiplier: 1.0
+  velocity_max: 1.0
+  velocity_damping: 0.09
+
+leg_5_joint_1_dyn:
+  p_gain: 0.172407
+  i_gain: 0.00118175
+  d_gain: 0.0288876
+  i_clamp: 0.0369872
+  pid_multiplier: 1.0
+  velocity_max: 1.0
+  velocity_damping: 0.09
+
+leg_5_joint_2_dyn:
+  p_gain: 0.172407
+  i_gain: 0.00118175
+  d_gain: 0.0288876
+  i_clamp: 0.0369872
+  pid_multiplier: 1.0
+  velocity_max: 1.0
+  velocity_damping: 0.09
+
+leg_5_joint_3_dyn:
+  p_gain: 0.275515
+  i_gain: 0.000756734
+  d_gain: 0.0288876
+  i_clamp: 0.0369872
+  pid_multiplier: 1.0
+  velocity_max: 1.0
+  velocity_damping: 0.09
+
+
+

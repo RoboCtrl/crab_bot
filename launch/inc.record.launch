@@ -1,0 +1,17 @@
+<launch>
+	
+	
+	<arg  name="rec_init"  default="-o $(find crab_bot)/bag/test-run  -b 1024  -j" />
+	<arg  name="rec_all"  default="--all" />
+	
+	
+	
+	<!-- R O S B A G   R E C O R D -->
+	<node  pkg="rosbag"  type="record"  name="rosbag_record_cam"  output="screen"
+		args="$(arg rec_init)  $(arg rec_all)" >
+	</node>
+	
+	
+	
+	
+</launch>
